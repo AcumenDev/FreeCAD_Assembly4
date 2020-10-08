@@ -89,11 +89,6 @@ class newDatum:
             # ... and it's an App::Part or an datum object
             if selectedObj.TypeId in self.containers or selectedObj.TypeId in self.datumTypes:
                 return(selectedObj)
-        # or of nothing is selected ...
-        elif App.ActiveDocument.getObject('Model'):
-            # ... but there is a Model:
-            return App.ActiveDocument.getObject('Model')
-        # if we're here it's because we didn't find a good reason to not be here
         return None
 
 
